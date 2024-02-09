@@ -4,7 +4,7 @@
 # Categorized 9/10 of documents that were provided.
 
 # Youtube Link : [Video](https://youtu.be/MRZuVGphEJo)
-# PPT -[PPT](https://www.canva.com/design/DAF8TXnUo3A/yGasrzllL2cbpqQXzqp8vw/edit?utm_content=DAF8TXnUo3A&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+# PPT - [PPT](https://www.canva.com/design/DAF8TXnUo3A/yGasrzllL2cbpqQXzqp8vw/edit?utm_content=DAF8TXnUo3A&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 # Overview
 This project involves building a machine learning model to categorize PDF documents based on their text content.
 The model is trained using a dataset containing information of various documents in the dataset.csv file, and it utilizes the Multinomial Naive Bayes algorithm for classification.
