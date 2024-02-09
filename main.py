@@ -44,7 +44,6 @@ class GradientWindow(QWidget):
 
         self.set_gradient_background()
 
-        # Register a hotkey using the keyboard library
         keyboard.add_hotkey('ctrl+p', self.run_python_file)
 
     def set_label_style(self, label, font_size, font_weight, text_color, font_family, alignment):
@@ -57,8 +56,8 @@ class GradientWindow(QWidget):
 
     def set_gradient_background(self):
         palette = QPalette()
-        gradient = QColor(224, 224, 224)  # Light gray
-        gradient.setNamedColor("#3498db")  # Current blue color
+        gradient = QColor(224, 224, 224)  
+        gradient.setNamedColor("#3498db")  
         palette.setBrush(QPalette.Window, gradient)
         self.setPalette(palette)
 

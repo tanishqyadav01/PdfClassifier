@@ -4,11 +4,10 @@ import time
 import pyperclip
 import PyPDF2
 import os
-import fitz  # PyMuPDF
+import fitz  
 from urllib.parse import unquote
 from plyer import notification
 import math
-import threading
 
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -19,13 +18,10 @@ from sklearn.pipeline import Pipeline
 from sklearn.model_selection import GridSearchCV
 import warnings
 
-# Suppress DeprecationWarning from PyArrow
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 import pandas as pd
 csv_file_path = 'dataset.csv'
-# df = pd.read_csv(csv_file_path)
 
-# Try reading the CSV file with different encodings
 try:
     df = pd.read_csv(csv_file_path, encoding='utf-8')
 except UnicodeDecodeError:
@@ -69,18 +65,13 @@ parameters = {
 grid_search = GridSearchCV(text_clf, parameters, cv=5, n_jobs=-1)
 grid_search.fit(train_data, train_labels)
 
-# Define best_model outside of the if __name__ == "__main__": block
 best_model = grid_search.best_estimator_
 best_model.fit(train_data, train_labels)
 
-# Make predictions on the test set
 predictions = best_model.predict(test_data)
 
-# Decode predicted labels back to original categories
-# predicted_categories = label_encoder.inverse_transform(predictions)
 predicted_categories = [key for key, value in custom_category_order.items() if value in predictions]
 
-# Evaluate the model
 accuracy = accuracy_score(test_labels, predictions)*100
 accuracyStr=str(math.ceil(accuracy))
 precision = precision_score(test_labels, predictions, average='weighted')*100
