@@ -28,16 +28,16 @@ except UnicodeDecodeError:
     df = pd.read_csv(csv_file_path, encoding='latin1')
 
 custom_category_order = {
-    'Legal': 0,
-    'Medical': 10,
-    'Creative': 20,
-    'Technical': 30,
-    'Education': 40,
-    'Business': 50,
-    'Scientific': 60,
-    'Government': 70,
-    'Finance': 80,
-    'News': 90,
+    'Legal Document': 0,
+    'Medical Document': 10,
+    'Creative Document': 20,
+    'Technical Document': 30,
+    'Education Document': 40,
+    'Business Document': 50,
+    'Scientific Research Papers Document': 60,
+    'Government Document': 70,
+    'Finance Document': 80,
+    'News Document': 90,
 }
 
 start_value = 0
