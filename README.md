@@ -3,7 +3,7 @@
 
 # Categorized 9/10 of documents that were provided.
 
-# Youtube Link : [Video](https://youtu.be/MRZuVGphEJo))
+# Youtube Link : [Video](https://youtu.be/MRZuVGphEJo)
 
 # Overview
 This project involves building a machine learning model to categorize PDF documents based on their text content.
