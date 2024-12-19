@@ -3,8 +3,7 @@ import keyboard
 import time
 import pyperclip
 import PyPDF2
-import os
-import fitz  
+import os  
 from urllib.parse import unquote
 from plyer import notification
 import math
